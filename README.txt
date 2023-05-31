@@ -15,10 +15,10 @@ To allow the spotify app to access your account:
 * Check the agreement and click save
 * Click settings at the top right
 * Copy your “Client ID” and paste it in the “client-id.txt” file
-* Save the file
+* Save the file and close
 * Click “View client secret”
 * Copy your “Client secret” and paste it in the “client-secret.txt” file
-* Save the file
+* Save the file and close
 * You can now close the developer page
 
 
