@@ -1,4 +1,8 @@
-﻿To allow the spotify app to access your account:
+This app uses the spotipy library to connect to the Spotify API
+This app combines multiple spotify playlists into one big playlist while keeping the original playlists intact
+
+
+To allow the spotify app to access your account:
 
 
 * Go to https://developer.spotify.com/dashboard and sign in with your spotify account
