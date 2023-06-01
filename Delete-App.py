@@ -54,7 +54,7 @@ def runApp():
             deleteList.append(song)
 
 
-    ttk.label(frame, text='deleting {} songs'.format(len(deleteList))).grid()
+    ttk.Label(frame, text='deleting {} songs'.format(len(deleteList))).grid()
     sp.playlist_remove_all_occurrences_of_items(ePlaylist, deleteList)
     
     ttk.Label(frame, text='Done!').grid()
