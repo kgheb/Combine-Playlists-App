@@ -96,7 +96,7 @@ def screen1():
     s = ttk.Style()
     s.configure('.', background='bisque', font=('Times New Roman', 12))
 
-    playlistNumLabel = ttk.Label(frame, text='How many total playlists do you have?').grid(row=0, pady=2)
+    playlistNumLabel = ttk.Label(frame, text='How many total playlists do you want to combine?').grid(row=0, pady=2)
     numPlaylistsEntry = StringVar()
     playlistNumEntry = ttk.Spinbox(frame, from_ = 1, to = 50, textvariable=numPlaylistsEntry).grid(row=1, pady=2)
     submitButton = ttk.Button(frame, text='Submit', command=submit).grid(row=2, pady=2)
