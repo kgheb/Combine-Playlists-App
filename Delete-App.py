@@ -1,4 +1,4 @@
-#removes songs that are in the combined playlist but not in all of the user specified playlists
+#removes songs that are in the combined playlist but not in any of the user specified playlists
 
 
 from tkinter import *
