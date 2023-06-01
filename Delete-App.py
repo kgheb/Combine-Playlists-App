@@ -50,12 +50,11 @@ def runApp():
     deleteList=[]
 
     for song in eSongList:
-        if song not in totalSongList:
-            print(song)
+        if song not in totalSongList
             deleteList.append(song)
 
 
-    print('deleting {} songs'.format(len(deleteList)))
+    ttk.label(frame, text='deleting {} songs'.format(len(deleteList))).grid()
     sp.playlist_remove_all_occurrences_of_items(ePlaylist, deleteList)
     
     ttk.Label(frame, text='Done!').grid()
