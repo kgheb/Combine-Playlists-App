@@ -50,7 +50,7 @@ def runApp():
     deleteList=[]
 
     for song in eSongList:
-        if song not in totalSongList
+        if song not in totalSongList:
             deleteList.append(song)
 
 
