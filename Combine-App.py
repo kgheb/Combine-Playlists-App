@@ -1,3 +1,6 @@
+#takes user-specified playlists and combines them into one user-specified playlist
+
+
 from tkinter import *
 from tkinter import ttk
 import spotipy
