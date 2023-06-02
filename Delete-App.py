@@ -18,8 +18,20 @@ def runApp():
     root = Tk()
     root.title('Spotify App')
 
-    frame = ttk.Frame(root, padding=20)
-    frame.grid()
+    mainFrame = ttk.Frame(root)
+    mainFrame.pack()
+
+    canvas = Canvas(mainFrame, bg='bisque')
+    canvas.pack(side = 'left', fill = 'both')
+
+    scrollbar = ttk.Scrollbar(mainFrame, orient='vertical', command = canvas.yview)
+    scrollbar.pack(side = 'right', fill = 'y')
+
+    frame = ttk.Frame(canvas)
+    frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+    canvas.create_window((0, 0), window=frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
 
     s = ttk.Style()
     s.configure('.', background='bisque', font=('Times New Roman', 12))
@@ -92,8 +104,20 @@ def screen2():
     root = Tk()
     root.title('Spotify App')
 
-    frame = ttk.Frame(root, padding=20)
-    frame.grid()
+    mainFrame = ttk.Frame(root)
+    mainFrame.pack()
+
+    canvas = Canvas(mainFrame, bg='bisque')
+    canvas.pack(side = 'left', fill = 'both')
+
+    scrollbar = ttk.Scrollbar(mainFrame, orient='vertical', command = canvas.yview)
+    scrollbar.pack(side = 'right', fill = 'y')
+
+    frame = ttk.Frame(canvas)
+    frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+    canvas.create_window((0, 0), window=frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
 
     s = ttk.Style()
     s.configure('.', background='bisque', font=('Times New Roman', 12))
@@ -146,8 +170,20 @@ def screen4():
     root = Tk()
     root.title('Spotify App')
     
-    frame = ttk.Frame(root, padding=20)
-    frame.grid()
+    mainFrame = ttk.Frame(root)
+    mainFrame.pack()
+
+    canvas = Canvas(mainFrame, bg='bisque')
+    canvas.pack(side = 'left', fill = 'both')
+
+    scrollbar = ttk.Scrollbar(mainFrame, orient='vertical', command = canvas.yview)
+    scrollbar.pack(side = 'right', fill = 'y')
+
+    frame = ttk.Frame(canvas)
+    frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+    canvas.create_window((0, 0), window=frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
 
     s = ttk.Style()
     s.configure('.', background='bisque', font=('Times New Roman', 12))
