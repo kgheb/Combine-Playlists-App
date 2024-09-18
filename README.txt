@@ -4,6 +4,7 @@ The "Delete-App" app deletes songs from a big playlist that are not in any of th
 
 Before running the python files, in your python terminal:
    run "pip install spotipy"
+   run "pip install tk"
 
 To allow the spotify apps to access your account:
 
