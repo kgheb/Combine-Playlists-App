@@ -1,13 +1,13 @@
 This app uses the spotipy library to connect to the Spotify API
-The "Combine-App" app combines multiple spotify playlists into one big playlist while keeping the original playlists intact
-The "Delete-App" app deletes songs from a big playlist that are not in any of the specified smaller playlists
+The "Combine-App" app combines all of your spotify playlists into one big playlist while keeping the original playlists intact
+The "Delete-App" app deletes songs from a big playlist that are not in any of your other playlists
 
-Before running the python files, in your python terminal:
-   run "pip install spotipy"
-   run "pip install tk"
+
+Run the following in your python terminal before running the python files:
+   "pip install spotipy"
+
 
 To allow the spotify apps to access your account:
-
 
 * Go to https://developer.spotify.com/dashboard and sign in with your spotify account
 * Click “create app” at the top right
@@ -27,14 +27,17 @@ To allow the spotify apps to access your account:
 
 
 Before running the apps (Combine-App.py and Delete-App.py), you must run Authentication.py:
+
 * Run Authentication.py
    * You will be redirected to your browser to sign in to spotify
    * When the prompt from spotify pops up to allow access, click “agree”
-   * You will be redirected to another webpage beginning with “https://localhost/”
+   * You will be redirected to another webpage beginning with “https://localhost/” (Note: you will get a connection error, this is fine, just proceed to the next step)
    * Copy the ENTIRE url and paste it into the terminal where the python file is being run (where it says “Enter the URL you were redirected to:”)
    * Press enter
    * The app is now authenticated
 
 
 Now you can run Combine-App.py and Delete-App.py → follow the instructions within the app to combine your playlists
-* NOTE: before running the app, I suggest creating a new playlist that your playlists will be combined into
+* NOTE: before running the app, I suggest creating a new playlist that your playlists will be combined into 
+* NOTE: Any playlists you do not want to add to your everything playlist should be private on your profile. This app will only combine your public playlists
+* NOTE: The apps take a long time to run. The app will close automatically 5 seconds after finishing
