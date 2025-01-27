@@ -1,6 +1,6 @@
 This app uses the spotipy library to connect to the Spotify API
 The "Combine-App" app combines all of your spotify playlists into one big playlist while keeping the original playlists intact
-The "Delete-App" app deletes songs from a big playlist that are not in any of your other playlists
+The "Delete-App" app deletes songs that are in a big playlist and not in any of your other playlists
 
 
 Run the following in your python terminal before running the python files:
