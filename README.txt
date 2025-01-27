@@ -38,6 +38,9 @@ Before running the apps (Combine-App.py and Delete-App.py), you must run Authent
 
 
 Now you can run Combine-App.py and Delete-App.py → follow the instructions within the app to combine your playlists
-* NOTE: before running the app, I suggest creating a new playlist that your playlists will be combined into 
-* NOTE: Any playlists you do not want to add to your everything playlist should be private on your profile. This app will only combine your public playlists
-* NOTE: The apps take a long time to run. The app will close automatically 5 seconds after finishing
+
+NOTES:
+* Before running the app, I suggest creating a new playlist that your playlists will be combined into 
+* Any playlists you do not want to add to your everything playlist should be private on your profile. This app will only combine your public playlists
+* The apps take a long time to run. The app will close automatically 5 seconds after finishing
+* If the app closes suddenly while running, it was most likely an error with the Spotify API. Try the app again, if the error ocurrs again, wait some time before retrying
