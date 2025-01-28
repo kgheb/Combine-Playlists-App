@@ -88,6 +88,42 @@ for spPlaylist in listOfPlaylists:
     else:
         print("All the songs in the playlist \"{}\" are already in the everything playlist".format(sp.playlist(gPlaylist, 'name')['name']))
 
+#declaring variables for liked songs
+likedSongsList = []
+offset=0
+addList = []
+
+#creating liked songs list
+while 1 == 1:
+    likedSongsDicts = sp.current_user_saved_tracks(50, offset)['items']
+
+    if len(likedSongsDicts) == 50:
+        for dict in likedSongsDicts:
+            likedSongsList.append(dict['track']['uri'])
+        offset += 50
+    else:
+        for dict in likedSongsDicts:
+            likedSongsList.append(dict['track']['uri'])
+        break
+
+#adding liked songs to addlist
+for song in likedSongsList:
+    if song in eSongList:
+        None
+    else:
+        addList.append(song)
+
+#adding addlist to playlist
+aRepeatTimes = math.ceil(len(addList)/100)
+if addList != []:
+    index = 0 
+    for i in range(aRepeatTimes):
+        sp.playlist_add_items(ePlaylist, addList[index:index+100])
+        index += 100
+    print("{} song(s) from \"Liked Songs\" succesfully added".format(len(addList)))
+else:
+    print("All the songs in \"Liked Songs\" are already in the everything playlist")
+
 print(' ')
 print('Done!')
 time.sleep(5)

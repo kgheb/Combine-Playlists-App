@@ -8,7 +8,7 @@ with open('client-secret.txt') as file:
     clientSecret = file.read()
 redirectUri='https://localhost/'
 #sets scopes to allow code to edit spotify playlists
-scopes = ['playlist-modify-public', 'playlist-modify-private']
+scopes = ['playlist-modify-public', 'playlist-modify-private', 'user-library-read']
 
 token = spotipy.util.prompt_for_user_token(scope=scopes, client_id=clientId, client_secret=clientSecret, redirect_uri=redirectUri, show_dialog=True)
 

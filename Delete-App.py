@@ -61,6 +61,22 @@ for i in range(eRepeatTimes):
         eSongList.append(item['track']['uri'])
     index +=100
 
+#adding all songs from liked songs to total songs list
+offset=0
+
+while 1 == 1:
+    likedSongsDicts = sp.current_user_saved_tracks(50, offset)['items']
+
+    if len(likedSongsDicts) == 50:
+        for dict in likedSongsDicts:
+            totalSongList.append(dict['track']['uri'])
+        offset += 50
+    else:
+        for dict in likedSongsDicts:
+            totalSongList.append(dict['track']['uri'])
+        break
+
+#deleting songs
 deleteList=[]
 
 for song in eSongList:
