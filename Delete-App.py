@@ -28,8 +28,17 @@ for dict in playlistDicts:
 dictOfPlaylistNames = {index: value for index, value in enumerate(listOfPlaylistNames)}
 print(dictOfPlaylistNames)
 
-#determines the index of the everything playlist
-ePlaylistIndex = int(input('Enter the number that corresponds to the playlist you want to delete songs from: '))
+while 1 == 1:
+    #determines the index of the everything playlist
+    ePlaylistIndex = int(input('Enter the number that corresponds to the playlist you would like to remove songs from: '))
+
+    #confirms the user's selection
+    print('')
+    confirmation = input('You would like to remove songs from the playlist titled \'{}\'? y/n: '.format(listOfPlaylistNames[ePlaylistIndex]))
+    if confirmation == 'y':
+        break
+    else:
+        print('')
 
 print('')
 print('Deleting songs now...')
