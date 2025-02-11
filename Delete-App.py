@@ -14,7 +14,14 @@ sp = spotipy.Spotify(auth=token)
 
 #retrieves all the playlists of the user as dictionaries
 userId=sp.current_user()['id']
+offset = 0
 playlistDicts = sp.user_playlists(userId)['items']
+while True:
+    if len(playlistDicts)%50 == 0:
+        offset += 50
+        playlistDicts.append(sp.user_playlists(userId, offset = offset)['items'])
+    else:
+        break
 
 #creates a list of all the playlist urls
 listOfPlaylists = []
@@ -28,7 +35,7 @@ for dict in playlistDicts:
 dictOfPlaylistNames = {index: value for index, value in enumerate(listOfPlaylistNames)}
 print(dictOfPlaylistNames)
 
-while 1 == 1:
+while True:
     #determines the index of the everything playlist
     ePlaylistIndex = int(input('Enter the number that corresponds to the playlist you would like to remove songs from: '))
 
@@ -73,10 +80,10 @@ for i in range(eRepeatTimes):
 #adding all songs from liked songs to total songs list
 offset=0
 
-while 1 == 1:
+while True:
     likedSongsDicts = sp.current_user_saved_tracks(50, offset)['items']
 
-    if len(likedSongsDicts) == 50:
+    if len(likedSongsDicts)%50 == 0:
         for dict in likedSongsDicts:
             totalSongList.append(dict['track']['uri'])
         offset += 50
